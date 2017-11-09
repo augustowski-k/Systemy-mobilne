@@ -1,13 +1,18 @@
 package proj.sm.systemymobilne;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class CofeeActivity extends AppCompatActivity {
+    TextView cofeeTV;
+    RadioGroup drinkRG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +21,24 @@ public class CofeeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //cofeeCB.setOnCheckedChangeListener(cofeeOnCheckedChanged);
+
+        drinkRG = (RadioGroup)findViewById(R.id.dringRG);
+        drinkRG.setOnCheckedChangeListener(dringOnCheckedChanged);
+
+        cofeeTV = (TextView)findViewById(R.id.cofeeTV);
+        init();
     }
 
+    private void init(){
+        //cofeeOnCheckedChanged.onCheckedChanged(cofeeCB,cofeeCB.isChecked());
+    }
+
+    private RadioGroup.OnCheckedChangeListener dringOnCheckedChanged = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+            RadioButton rButton = (RadioButton) group.findViewById(checkedId);
+            cofeeTV.setText(rButton.getText());
+        }
+    };
 }
