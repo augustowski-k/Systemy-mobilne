@@ -1,14 +1,16 @@
-package proj.sm.systemymobilne;
+package proj.sm.systemymobilne.activities;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import proj.sm.systemymobilne.PreferenceTypes;
+import proj.sm.systemymobilne.R;
+import proj.sm.systemymobilne.Repositories.BasePreferenceRepository;
+import proj.sm.systemymobilne.Repositories.PreferencesRepositoryFactory;
 
 public class Launcher extends Activity {
 

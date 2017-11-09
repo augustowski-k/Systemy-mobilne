@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="proj.sm.systemymobilne.CofeeActivity"
+    tools:context="proj.sm.systemymobilne.activities.CofeeActivity"
     tools:showIn="@layout/activity_cofee"
     android:orientation="vertical">
 

@@ -1,4 +1,4 @@
-package proj.sm.systemymobilne;
+package proj.sm.systemymobilne.activities;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -9,6 +9,8 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import proj.sm.systemymobilne.R;
 
 public class CofeeActivity extends AppCompatActivity {
     TextView cofeeTV;

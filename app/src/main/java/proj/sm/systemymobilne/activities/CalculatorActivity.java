@@ -1,4 +1,4 @@
-package proj.sm.systemymobilne;
+package proj.sm.systemymobilne.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import proj.sm.systemymobilne.R;
 
 public class CalculatorActivity extends AppCompatActivity {
     Button oneBtn,twoBtn,threeBtn,fourBtn,fiveBtn,sixBtn,sevenBtn,eightBtn,nineBtn,minusBtn,plusBtn,equalsBtn;

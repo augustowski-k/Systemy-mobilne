@@ -1,4 +1,4 @@
-package proj.sm.systemymobilne;
+package proj.sm.systemymobilne.activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import proj.sm.systemymobilne.PreferenceTypes;
+import proj.sm.systemymobilne.R;
+import proj.sm.systemymobilne.Repositories.BasePreferenceRepository;
+import proj.sm.systemymobilne.Repositories.PreferencesRepositoryFactory;
 
 public class Remover extends AppCompatActivity {
     Button rmDataBtn;
