@@ -29,11 +29,6 @@ public class CofeeActivity extends AppCompatActivity {
         drinkRG.setOnCheckedChangeListener(dringOnCheckedChanged);
 
         cofeeTV = (TextView)findViewById(R.id.cofeeTV);
-        init();
-    }
-
-    private void init(){
-        //cofeeOnCheckedChanged.onCheckedChanged(cofeeCB,cofeeCB.isChecked());
     }
 
     private RadioGroup.OnCheckedChangeListener dringOnCheckedChanged = new RadioGroup.OnCheckedChangeListener() {
