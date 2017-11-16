@@ -4,4 +4,5 @@
     <string name="title_activity_remover">Remover</string>
     <string name="title_activity_cofee">CofeeActivity</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
+    <string name="title_activity_countries">CountriesActivity</string>
 </resources>
