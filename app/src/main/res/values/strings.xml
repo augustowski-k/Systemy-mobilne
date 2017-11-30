@@ -5,4 +5,5 @@
     <string name="title_activity_cofee">CofeeActivity</string>
     <string name="title_activity_calculator">CalculatorActivity</string>
     <string name="title_activity_countries">CountriesActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
