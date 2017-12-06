@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/keyboardOff"
+        android:title="Dezaktywuj klawiature"/>
+    <item android:id="@+id/firstStringTedDisabled"
+        android:title="Dezaktywuj pole 1"/>
+</menu>

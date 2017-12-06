@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/firstStringEditMenuColor">
+        <item android:id="@+id/blueFirstStringEdit"
+            android:title="Niebieski"/>
+        <item android:id="@+id/redFirstStringEdit"
+            android:title="Czerwony"/>
+    </group>
+</menu>

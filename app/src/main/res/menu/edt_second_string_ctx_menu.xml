@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/secondStringEditMenuInputType">
+        <item android:id="@+id/dateSecondStringEdit"
+            android:title="Data"/>
+        <item android:id="@+id/phoneSecondStringEdit"
+            android:title="Numer telefonu"/>
+        <item android:id="@+id/passwordSecondStringEdit"
+            android:title="Haslo"/>
+    </group>
+</menu>

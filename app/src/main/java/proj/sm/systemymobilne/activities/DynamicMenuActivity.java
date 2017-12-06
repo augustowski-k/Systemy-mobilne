@@ -6,10 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 
 import proj.sm.systemymobilne.R;
+import proj.sm.systemymobilne.Tools;
 
 public class DynamicMenuActivity extends AppCompatActivity {
     EditText edtFirstString, edtSecondString;
@@ -52,16 +55,35 @@ public class DynamicMenuActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        String viewName = "noIdea";
+        if (item.getActionView().getId() == R.id.edtFirstString){
+            viewName = "edtFirstString";
+        }
+        if (item.getActionView().getId() == R.id.edtSecondString){
+            viewName = "edtSecondString";
+        }
+        Tools.showToast("Wybrano kontekstowe menu dla widoku " + viewName + ". Wybrana opcja to: " + item.getTitle(), this);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Tools.showToast("Wybrano menu opcji. " + item.getTitle(), this);
+        return true;
+    }
+
     private void initFirstStringContextMenu(ContextMenu menu, int id) {
         menu.setHeaderTitle("First string menu");
-        menu.add(0,id,0,"Hello1");
-        menu.add(0,id,0,"Hello2");
+        menu.add(0,id,0,"Hello1").setActionView(edtFirstString);
+        menu.add(0,id,0,"Hello2").setActionView(edtFirstString);
     }
 
     private void initSecondStringContextMenu(ContextMenu menu, int id) {
         menu.setHeaderTitle("Second string menu");
-        menu.add(0,id,0,"Hello1");
-        menu.add(0,id,0,"Hello2");
-        menu.add(0,id,0,"Hello3");
+        menu.add(0,id,0,"Hello1").setActionView(edtSecondString);
+        menu.add(0,id,0,"Hello2").setActionView(edtSecondString);
+        menu.add(0,id,0,"Hello3").setActionView(edtSecondString);
     }
 }
