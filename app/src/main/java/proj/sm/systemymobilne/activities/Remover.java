@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import proj.sm.systemymobilne.PreferenceTypes;
 import proj.sm.systemymobilne.R;
-import proj.sm.systemymobilne.Repositories.BasePreferenceRepository;
-import proj.sm.systemymobilne.Repositories.PreferencesRepositoryFactory;
+import proj.sm.systemymobilne.Repositories.PreferenceRepositories.BasePreferenceRepository;
+import proj.sm.systemymobilne.Repositories.PreferenceRepositories.PreferencesRepositoryFactory;
 
 public class Remover extends AppCompatActivity {
     Button rmDataBtn;

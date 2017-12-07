@@ -1,4 +1,4 @@
-package proj.sm.systemymobilne.Repositories;
+package proj.sm.systemymobilne.Repositories.PreferenceRepositories;
 
 import android.content.SharedPreferences;
 
