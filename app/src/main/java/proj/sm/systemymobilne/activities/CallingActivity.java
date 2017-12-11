@@ -1,5 +1,6 @@
 package proj.sm.systemymobilne.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +32,15 @@ public class CallingActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Tools.showToast(data.getStringExtra("zwrot"),this);
+        if(resultCode == Activity.RESULT_OK){
+            Tools.showToast("zaakceptowane", this);
+            finish();
+        }
+        else if(resultCode == Activity.RESULT_CANCELED){
+            Tools.showToast("koniec",this);
+            finish();
+        }else if(resultCode == Integer.MAX_VALUE){
+            Tools.showToast("Ponow", this);
+        }
     }
 }

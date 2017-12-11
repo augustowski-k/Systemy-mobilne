@@ -170,7 +170,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.CalledActivity"></activity>
+        <activity
+            android:name=".activities.CalledActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.ChooseCountryButtonActivity"
+            android:label="ChooseCountry"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ChooseCountryListActivity" />
+        <activity android:name=".activities.ChooseCountryTextViewActivity"></activity>
     </application>
 
 </manifest>
