@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="proj.sm.systemymobilne">
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -183,8 +184,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ChooseCountryListActivity" />
-        <activity android:name=".activities.ChooseCountryTextViewActivity"></activity>
+        <activity android:name=".activities.ChooseCountryListActivity" >
+            <intent-filter>
+                <action android:name="ChooseCountry"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ChooseCountryTextViewActivity">
+            <intent-filter>
+                <action android:name="ShowCountry"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import proj.sm.systemymobilne.R;
 import proj.sm.systemymobilne.Repositories.ICountriesRepository;
@@ -23,6 +24,7 @@ public class ChooseCountryListActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_countries);
+        Intent i = getIntent();
 
         ICountriesRepository countryRepo = new SimpleCountryRepository();
         countries = (ArrayList<String>)countryRepo.getCountryNames();
@@ -39,9 +41,20 @@ public class ChooseCountryListActivity extends ListActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             Intent returnIntent = new Intent();
             returnIntent.putExtra("CountryName", countries.get(position));
-
-            setResult(Activity.RESULT_OK,returnIntent);
+            returnIntent.putExtra("CountryPhone", getRandomNumber());
+            setResult(Activity.RESULT_OK, returnIntent);
             finish();
         }
     };
+
+    private String getRandomNumber(){
+        Random rd = new Random();
+        StringBuilder sb = new StringBuilder("");
+
+        for (int i = 0; i < 9; i++){
+            sb.append(rd.nextInt(9));
+        }
+
+        return sb.toString();
+    }
 }
